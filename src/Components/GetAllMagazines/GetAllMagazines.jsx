@@ -87,7 +87,7 @@ function GetAllMagazines() {
               <th>Banner</th>
               <th>Description</th>
               <th>PDF</th>
-              <th>Edit</th>
+              {/* <th>Edit</th> */}
               <th>Delete</th>
             </tr>
           </thead>
@@ -108,9 +108,9 @@ function GetAllMagazines() {
               <td>
                 <a href={song.pdf}>{song.pdf}</a>
               </td>
-              <td>
+              {/* <td>
                 <button> <EditOutlined/></button>
-              </td>
+              </td> */}
                 <td>
                   <Button
                   onClick={() => handleDelete(song._id)}

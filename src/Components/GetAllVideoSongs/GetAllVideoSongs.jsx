@@ -89,7 +89,7 @@ function GetAllVideoSongs() {
 
                 </td>
                 <td>
-                  <button onClick={() => handleUpdate(video)}>Update</button>
+                  {/* <button onClick={() => handleUpdate(video)}>Update</button> */}
                   <button onClick={() => handleDelete(video)}>Delete</button>
                 </td>
               </tr>

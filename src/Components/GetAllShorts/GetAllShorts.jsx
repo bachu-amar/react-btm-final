@@ -139,7 +139,7 @@ function GetAllShorts() {
               <th>Title</th>
               <th>Description</th>
               <th>YouTube URL</th>
-              <th>Edit</th>
+              {/* <th>Edit</th> */}
               <th>Delete</th>
             </tr>
           </thead>
@@ -181,7 +181,7 @@ function GetAllShorts() {
                     short.YouTube_Url
                   )}
                 </td>
-                <td>
+                {/* <td>
                   {editedShortId === short._id ? (
                     <button onClick={saveEdit}>Save</button>
                   ) : (
@@ -189,7 +189,7 @@ function GetAllShorts() {
                       <EditOutlined />
                     </button>
                   )}
-                </td>
+                </td> */}
                 <td>
                   <button
                     onClick={() => handleDelete(short._id)}

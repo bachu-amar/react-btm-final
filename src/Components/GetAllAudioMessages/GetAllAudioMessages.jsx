@@ -131,7 +131,7 @@ function GetAllAudioMessages() {
               <th>MainmostFolderName</th>
               <th>SubFolderName</th>
               <th>Audio</th>
-              <th>Edit</th>
+              {/* <th>Edit</th> */}
               <th>Delete</th>
             </tr>
           </thead>
@@ -168,7 +168,7 @@ function GetAllAudioMessages() {
                     <source src={song.AudioMesssage_location} type="audio/mpeg" />
                   </audio>
                 </td>
-                <td>
+                {/* <td>
                   {editedSongId === song._id ? (
                     <button onClick={saveEdit}>Save</button>
                   ) : (
@@ -176,7 +176,7 @@ function GetAllAudioMessages() {
                       <EditOutlined />
                     </button>
                   )}
-                </td>
+                </td> */}
                 <td>
                   <button
                     onClick={() => handleDelete(song._id)}

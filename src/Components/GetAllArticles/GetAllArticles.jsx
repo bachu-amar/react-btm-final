@@ -86,7 +86,7 @@ function GetAllArticles() {
               <th>Title</th>
               <th>Content</th>
               <th>PDF</th>
-              <th>Edit</th>
+              {/* <th>Edit</th> */}
               <th>Delete</th>
             </tr>
           </thead>
@@ -110,11 +110,11 @@ function GetAllArticles() {
               <td>
               <a href={song.pdfLocation}>{song.pdfLocation}</a>
               </td>
-              <td>
+              {/* <td>
                 <button>
                 <EditOutlined/>
                 </button>
-              </td>
+              </td> */}
                 <td>
                   <Button
                   onClick={() => handleDelete(song._id)}

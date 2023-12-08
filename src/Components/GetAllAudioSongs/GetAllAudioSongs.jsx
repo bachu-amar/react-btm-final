@@ -132,7 +132,7 @@ function GetAllAudioSongs() {
               <th>Album</th>
               <th>Lyrics</th>
               <th>Audio</th>
-              <th>Edit</th>
+              {/* <th>Edit</th> */}
               <th>Delete</th>
             </tr>
           </thead>
@@ -167,7 +167,7 @@ function GetAllAudioSongs() {
                     <source src={song.Audio_location} type="audio/mpeg" />
                   </audio>
                 </td>
-                <td>
+                {/* <td>
                   {editedSongId === song._id ? (
                     <button onClick={saveEdit}>Save</button>
                   ) : (
@@ -175,7 +175,7 @@ function GetAllAudioSongs() {
                       <EditOutlined />
                     </button>
                   )}
-                </td>
+                </td> */}
                 <td>
                   <button
                     onClick={() => handleDelete(song._id)}

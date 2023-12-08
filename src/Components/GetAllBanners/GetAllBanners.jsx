@@ -75,7 +75,7 @@ function GetAllBanners() {
                 <td>{article.status}</td>
                 <td>
                   <button onClick={() => deleteBanner(article._id)}>Delete</button>
-                  <button onClick={() => updateBanner(article._id, {/* new data */})}>Update</button>
+                  {/* <button onClick={() => updateBanner(article._id, new data)}>Update</button> */}
                 </td>
               </tr>
             ))}
