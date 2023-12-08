@@ -152,9 +152,9 @@ function GetAllVideoMessagesSubFolder() {
         return response.json();
       })
       .then((data) => {
-        if (Array.isArray(data)) {
-          setFetchedData(data);
-          console.log("Fetched data:", data);
+        if (data) {
+          setFetchedData(data.getallsubfolders);
+          console.log("Fetched data:", data.getallsubfolders);
         } else {
           throw new Error("Data structure not as expected");
         }

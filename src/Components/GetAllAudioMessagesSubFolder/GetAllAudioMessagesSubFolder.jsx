@@ -21,12 +21,12 @@ function GetAllAudioMessagesSubFolder() {
         return response.json();
       })
       .then((data) => {
-        if (Array.isArray(data)) {
-          setFetchedData(data);
-          console.log("Fetched data:", data);
+        if (data) {
+          setFetchedData(data.allsubfolders);
+          console.log("Fetched data:", data.allsubfolders);
         } else {
           throw new Error("Data structure not as expected");
-        }
+        }   
       })
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
@@ -36,7 +36,7 @@ function GetAllAudioMessagesSubFolder() {
     try {
       console.log("Deleting song with ID:", songId);
       const response = await fetch(
-        `${apiUrl}/mainfolder/delete/${songId}`,
+        `${apiUrl}/subfolder/delete/${songId}`,
         {
           method: "DELETE",
           headers: {
@@ -58,7 +58,7 @@ function GetAllAudioMessagesSubFolder() {
       // Handle error, e.g., show a notification to the user
     }
   };
-//   magazine/updatemagazine/
+
 
   const handleGetAll = () => {
     setShowData(true);
@@ -82,6 +82,7 @@ function GetAllAudioMessagesSubFolder() {
             <tr>
               <th>Banner</th>
               <th>Main Folder</th>
+              <th>Sub Folder</th>
               {/* <th>Edit</th> */}
               <th>Delete</th>
             </tr>
@@ -99,6 +100,9 @@ function GetAllAudioMessagesSubFolder() {
                 </td>
               <td>
                {song.MainmostFolderName}
+              </td>
+              <td>
+               {song.SubFolderName}
               </td>
               {/* <td>
                 <button> <EditOutlined/></button>
