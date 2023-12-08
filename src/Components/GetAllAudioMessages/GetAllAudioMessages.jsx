@@ -16,8 +16,7 @@ function GetAllAudioMessages() {
 
   const fetchData = () => {
     fetch(
-      // "http://ec2-13-233-129-161.ap-south-1.compute.amazonaws.com:8080/v1/audio/getall"
-      `${apiUrl}/audio/allsongs`
+      `${apiUrl}/audiomessage/getall`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -32,7 +31,7 @@ function GetAllAudioMessages() {
       console.log("Deleting song with ID:", songId);
       const response = await fetch(
         // `http://ec2-13-233-129-161.ap-south-1.compute.amazonaws.com:8080/v1/audio/delete/${songId}`,
-        `${apiUrl}/audio/delete/${songId}`,
+        `${apiUrl}/audiomessage/delete/${songId}`,
         {
           method: "DELETE",
           headers: {
@@ -68,7 +67,7 @@ function GetAllAudioMessages() {
     try {
       const response = await fetch(
         // `http://ec2-13-233-129-161.ap-south-1.compute.amazonaws.com:8080/v1/audio/updateAudio/${editedSongId}`,
-        `${apiUrl}/audio/updateAudio/${editedSongId}`,
+        `${apiUrl}/audiomessage/updateAudio/${editedSongId}`,
         {
           method: "PUT",
           headers: {
@@ -126,10 +125,11 @@ function GetAllAudioMessages() {
           <thead>
             <tr>
               <th>Banner</th>
-              <th>Title</th>
-              <th>Artist</th>
-              <th>Album</th>
-              <th>Lyrics</th>
+              <th>AudioMesssagetitle</th>
+              <th>artist</th>
+              <th>description</th>
+              <th>MainmostFolderName</th>
+              <th>SubFolderName</th>
               <th>Audio</th>
               <th>Edit</th>
               <th>Delete</th>
@@ -141,13 +141,13 @@ function GetAllAudioMessages() {
                 <td>
                   <div className="song-info">
                     <img
-                      src={song.Banner_location}
+                      src={song.AudioMesssageBanner_location}
                       alt="Banner"
                       className="banner"
                     />
                   </div>
                 </td>
-                <td>
+                {/* <td>
                   {editedSongId === song._id ? (
                     <input
                       type="text"
@@ -157,13 +157,15 @@ function GetAllAudioMessages() {
                   ) : (
                     song.Musictitle
                   )}
-                </td>
+                </td> */}
+                <td>{song.AudioMesssagetitle}</td>
                 <td>{song.artist}</td>
-                <td>{song.AlbumName}</td>
-                <td>{song.lyrics}</td>
+                <td>{song.description}</td>
+                <td>{song.MainmostFolderName}</td>
+                <td>{song.SubFolderName}</td>
                 <td>
                   <audio controls>
-                    <source src={song.Audio_location} type="audio/mpeg" />
+                    <source src={song.AudioMesssage_location} type="audio/mpeg" />
                   </audio>
                 </td>
                 <td>
@@ -195,8 +197,4 @@ function GetAllAudioMessages() {
 }
 
 export default GetAllAudioMessages;
-
-
-
-
 

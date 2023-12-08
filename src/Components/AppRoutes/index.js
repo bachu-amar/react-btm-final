@@ -25,6 +25,10 @@ import Shorts from '../Shorts/Shorts';
 import GetAllVideoSongs from '../GetAllVideoSongs/GetAllVideoSongs';
 import GetAllShorts from '../GetAllShorts/GetAllShorts';
 import GetAllAudioAlbums from '../AudioSongsAlbumNames/AlbumNames'
+import GetAllAudioMessagesMainFolder from '../GetAllAudioMessagesMainFolder/GetAllAudioMessagesMainFolder';
+import GetAllAudioMessagesSubFolder from '../GetAllAudioMessagesSubFolder/GetAllAudioMessagesSubFolder';
+import GetAllVideoMessagesMainFolder from '../GetAllVideoMessagesMainFolder/GetAllVideoMessagesMainFolder';
+import GetAllVideoMessagesSubFolder from '../GetAllVideoMessagesSubFolder/GetAllVideoMessagesSubFolder';
 
 function AppRoutes() {
 
@@ -56,9 +60,17 @@ function AppRoutes() {
         
         <Route path="/managable/GetAllAudioAlbums" element={<GetAllAudioAlbums />} />
         <Route path="/Managable/GetAllAudioSongs" element={<GetAllAudioSongs />} />
+
+        <Route path="/Managable/GetAllAudioMessagesMainFolder" element={<GetAllAudioMessagesMainFolder />} />
+        <Route path="/Managable/GetAllAudioMessagesSubFolder" element={<GetAllAudioMessagesSubFolder />} />
         <Route path="/Managable/GetAllAudioMessages" element={<GetAllAudioMessages />} />
+
         <Route path="/Managable/GetAllVideoSongs" element={<GetAllVideoSongs />} />
+
+        <Route path="/Managable/GetAllVideoMessagesMainFolder" element={<GetAllVideoMessagesMainFolder />} />
+        <Route path="/Managable/GetAllVideoMessagesSubFolder" element={<GetAllVideoMessagesSubFolder />} />
         <Route path="/Managable/GetAllVideoMessage" element={<GetAllVideoMessage />} />
+
         <Route path="/Managable/GetAllArticles" element={<GetAllArticles />} />
         <Route path="/Managable/GetAllMagazines" element={<GetAllMagazines />} />
         <Route path="/Managable/GetAllBanners" element={<GetAllBanners />} />

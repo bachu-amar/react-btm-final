@@ -71,9 +71,17 @@ function SideMenu() {
         <Menu.SubMenu key="/managable" icon={<AppstoreOutlined />} title="Managable">
         <Menu.Item key="/managable/GetAllAudioAlbums">Get All Audio Albums</Menu.Item>
           <Menu.Item key="/managable/GetAllAudioSongs">Get All Audio Songs</Menu.Item>
+
+          <Menu.Item key="/managable/GetAllAudioMessagesMainFolder">Audio Messages Main Folder</Menu.Item>
+          <Menu.Item key="/managable/GetAllAudioMessagesSubFolder">Audio Messages Sub Folder</Menu.Item>
           <Menu.Item key="/managable/GetAllAudioMessages">Get All Audio Messages</Menu.Item>
+
           <Menu.Item key="/managable/GetAllVideoSongs">Get All Video Songs</Menu.Item>
+
+          <Menu.Item key="/managable/GetAllVideoMessagesMainFolder">Video Messages Main Folder</Menu.Item>
+          <Menu.Item key="/managable/GetAllVideoMessagesSubFolder">Video Messages Sub Folder</Menu.Item>
           <Menu.Item key="/managable/GetAllVideoMessage">Get All VideoMessages</Menu.Item>
+
           <Menu.Item key="/managable/GetAllArticles">Get All Articles</Menu.Item>
           <Menu.Item key="/managable/GetAllMagazines">Get All Magzines</Menu.Item>
           <Menu.Item key="/managable/GetAllBanners">Get All Banners</Menu.Item>
